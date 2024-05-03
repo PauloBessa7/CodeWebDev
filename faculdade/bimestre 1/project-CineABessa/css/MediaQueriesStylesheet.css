@@ -1,0 +1,117 @@
+@media screen and (max-width : 1200px) {
+
+    /* PAGINA INDEX */
+    #absolut {
+        display: none;
+    }
+
+    #navegation {
+        width: auto;
+    }
+
+    ul {
+        justify-content: right;
+    }
+
+    li {
+        font-size: 2.6vw;
+    }
+
+    li a {
+        margin-left: 15px;
+        padding: 5px;
+        color: rgb(219, 214, 214);
+    }
+
+    #banner {
+        opacity: 0.5;
+        width: 100vw;
+        height: 45vw;
+        background-size: cover;
+    }
+
+    #catalago-filmes {
+
+        margin: 40px auto;
+    }
+
+    #menu-datas {
+        width: 100%;
+    }
+
+    /* PAGINA FILME */
+
+    #absolut-paginas img {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width : 800px) {
+
+    /* PAGINA INDEX  */
+    #nome-preco {
+        display: block;
+    }
+
+    #informativo-filme {
+        margin-top: 15px;
+        width: 99%;
+        display: block;
+    }
+
+    #informativo-fime p,
+    h2,
+    .horario {
+        display: none;
+    }
+
+    #informativo-filme h3 {
+        display: none;
+    }
+
+    #informativo-filme h1 {
+        font-size: 7vw;
+    }
+
+
+
+
+    .capa-filme-catalago {
+        margin: auto;
+        width: 99%;
+    }
+
+    .filme {
+        margin: 20px auto 60px;
+        max-width: 300px;
+        height: auto;
+        background-color: rgb(33 38 45);
+        border-radius: 10px;
+
+        padding: 15px;
+
+        display: block;
+        align-items: center;
+    }
+
+    #sessao-banner-pagina {
+        align-items: center;
+    }
+
+    /* PAGINA FILME */
+
+    #absolut-paginas {
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        justify-content: none;
+        position: relative;
+        height: auto;
+        margin: auto;
+    }
+
+    #absolut-paginas p{
+        width: 100%;
+    }
+}

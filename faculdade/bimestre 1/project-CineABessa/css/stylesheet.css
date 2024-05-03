@@ -1,0 +1,360 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+    list-style-type: none;
+}
+
+body {
+    background-color: #041218;
+    height: auto;
+
+
+}
+
+a {
+    color: black;
+}
+
+header {
+    width: 100vw;
+    height: auto;
+    background: #3255e2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+
+}
+
+#navegation {
+    width: 60%;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+li a {
+    margin-left: 45px;
+    padding: 5px;
+    color: rgb(219, 214, 214);
+}
+
+/* banner */
+#sessao-banner {
+    width: 100vw;
+
+    align-items: center;
+}
+
+#banner {
+    opacity: 0.5;
+    width: 100vw;
+    height: 25vw;
+    background-size: 10%;
+}
+
+/* absolut */
+
+#absolut {
+
+    background-color: rgba(0, 0, 0, 0.701);
+
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    width: 80vw;
+    height: 200px;
+
+    display: flex;
+    position: absolute;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    top: 15rem;
+    left: 5rem;
+
+    justify-content: space-around;
+
+    z-index: 100000;
+}
+
+#texto-absolut {
+    width: 70%;
+}
+
+#absolut p,
+h1 {
+    line-height: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: rgb(219, 214, 214);
+}
+
+/* catalago filmes */
+
+#catalago-filmes {
+    width: 70vw;
+    height: 10px;
+    border-top: 3px solid rgb(38, 38, 38);
+    border-radius: 100px;
+    margin: 100px auto;
+}
+
+#menu-datas {
+    margin: 70px auto;
+    width: 90%;
+    height: 70px;
+    background-color: lightslategray;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.data {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(219, 214, 214, 0.808);
+    font-size: 120%;
+}
+
+.data.active {
+    transform: scale(1.2);
+    color: white;
+}
+
+.horario {
+    margin: 5px;
+    padding: 5px;
+}
+
+.filme {
+    margin: 20px auto;
+    width: 90%;
+    height: 280px;
+    background-color: rgb(33 38 45);
+    border-radius: 10px;
+
+    padding: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filme:hover {
+    transition-duration: 0.1s;
+    scale: 1.01;
+    ;
+}
+
+.capa-filme-catalago {
+    height: 99%;
+}
+
+#informativo-filme {
+    align-items: center;
+    width: 70%;
+    display: block;
+}
+
+#informativo-filme>h1,a,h3,h2 {
+    color: rgb(219, 214, 214);
+}
+
+#informativo-filme h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    border-top: 2px solid black;
+    padding-top: 15px;
+    display: block;
+}
+
+#informativo-filme h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#informativo-filme p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#informativo-filme h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#informativo-filme h2:hover {
+    color: black;
+}
+
+#informativo-filme h1 {
+    font-size: 210%;
+}
+
+#nome-preco {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+
+/* Paginas */
+
+#absolut-paginas {
+    font-family: Arial, Helvetica, sans-serif;
+
+    max-width: 80vw;
+    height: 200px;
+
+    display: flex;
+    position: absolute;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    top: 5rem;
+    left: 5rem;
+
+    justify-content: space-around;
+
+    z-index: 100000;
+}
+
+#absolut-paginas p,
+h1 {
+    color: rgb(219, 214, 214);
+    line-height: 30px;
+}
+
+#absolut-paginas p {
+    font-size: 130%;
+    text-justify: newspaper;
+}
+
+#absolut-paginas h1 {
+    font-size: 200%;
+}
+
+#gravida-taubate-pagina {
+    width: 17%;
+    height: 40vh;
+}
+
+#sessao-banner-paginas {
+    width: 100vw;
+
+    align-items: center;
+}
+
+#banner-paginas {
+    opacity: 0.5;
+    width: 100vw;
+    min-height: 35vh;
+    max-height: 25vh;
+    background-size: 10%;
+}
+
+/* Paginas filme formulario e horios */
+
+#catalago-filme-pagina {
+    width: 70vw;
+    height: 10px;
+    border-top: 3px solid rgb(38, 38, 38);
+
+    margin: 100px auto;
+    padding: 20px 0px;
+}
+
+#menu-data-pagina {
+    margin: 10px auto;
+    width: 90%;
+    height: 70px;
+    background-color: lightslategray;
+    border-radius: 10px;
+}
+
+.filme-pagina {
+    margin: 20px auto;
+    width: 90%;
+    height: 280px;
+    background-color: rgb(33 38 45);
+    border-radius: 10px;
+
+    padding: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#assentos-sessao {
+    max-width: 100%;
+    margin: 20px auto;
+    height: auto;
+
+}
+
+.coluna-assentos-sessao {
+    display: flex;
+    justify-content: space-around;
+}
+
+.assento {
+    width: 24px;
+    height: 24px;
+    background-color: rgb(123, 255, 47);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sessao_ingressos{
+    width: 100%;
+    height: auto;
+    
+}
+
+.ingressos{
+    width: 90%;
+    padding: 15px;
+    height: auto;
+    border-radius: 20px;
+    margin: auto;
+    background-color: rgba(47, 3, 168, 0.202);
+    margin-bottom: 10px;
+}
+
+.ingressos h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#editar{
+    cursor: pointer;
+    color: yellow;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 15px;
+}
+
+#excluir{
+    cursor: pointer;
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+

@@ -1,0 +1,288 @@
+let lista = [];
+
+// Adiciona cadeiras já ocupadas à lista utilizando o método push()
+lista.push(
+    {
+        'nome': 'Pedro',
+        'email': 'email@example.com',
+        'horario': '14:50',
+        'numero_assento': '3',
+        'tipo_entrada': 'meia'
+    },
+
+    {
+        'nome': 'Pedro',
+        'email': 'email@example.com',
+        'horario': '14:50',
+        'numero_assento': '4',
+        'tipo_entrada': 'meia'
+    },
+
+    {
+        'nome': 'Pedro',
+        'email': 'email@example.com',
+        'horario': '14:50',
+        'numero_assento': '49',
+        'tipo_entrada': 'meia'
+    },
+
+    {
+        'nome': 'Pedro',
+        'email': 'email@example.com',
+        'horario': '14:50',
+        'numero_assento': '31',
+        'tipo_entrada': 'meia'
+    },
+
+    {
+        'nome': 'Pedro',
+        'email': 'email@example.com',
+        'horario': '14:50',
+        'numero_assento': '27',
+        'tipo_entrada': 'meia'
+    }
+);
+
+imprimirAssentos(); // imprimir a lista de assentos disponiveis ;
+
+function realizarCompra() {
+    // Obtém o número do assento digitado pelo usuário
+    let numeroAssento = document.getElementById('numero_assento').value;
+
+    // Exibe o número do assento no console (apenas para debug)
+    console.log('Assento selecionado:', numeroAssento);
+
+    // Verifica o status do assento utilizando a função verificarStatus_Assento()
+    let statusAssento = verificarStatus_Assento(numeroAssento);
+
+    // Exibe o status do assento no console (apenas para debug)
+    console.log('Status do assento:', statusAssento);
+
+    // Verifica se o assento está disponível (status true) ou indisponível (status false)
+    if (statusAssento) {
+        // Solicita confirmação de pagamento ao usuário
+        var confirmacao = confirm("Deseja confirmar o pagamento?");
+
+        // Se o usuário confirmar o pagamento, gera a entrada
+        if (confirmacao) {
+            gerarEntrada(); // Chamada à função para gerar a entrada
+        }
+    } else {
+        // Exibe um alerta informando que o assento está indisponível
+        alert('Assento indisponível. Por favor, escolha outro assento.');
+    }
+}
+
+
+
+
+
+function verificarStatus_Assento(assento) {
+    // Verificar se o assento está presente na lista
+    let assentoOcupado = lista.some(item => item.numero_assento === assento);
+    // o método de array .some juntamente com o callback vai ser resposável por aplicar uma codição para da objeto da lista
+    // cada algum objeto satisfazer essa condição é retornado true caso cotrario é retornado false
+    // ou seja, caso for true esse assento esta ocupado, caso false esse assento esta disponivel
+    // Retornar true se o assento estiver disponível (não ocupado) e false se estiver ocupado
+    return !assentoOcupado;
+}
+
+let ingressos = [];
+
+function gerarEntrada() {
+
+    // obtem as informações digitads no forms do HTTML pelo usuário
+    let nome = document.getElementById('nome').value;
+    let email = document.getElementById('email').value;
+    let horario = document.getElementById('horario').value;
+    let numero_assento = document.getElementById('numero_assento').value;
+    let tipo_entrada = document.getElementById('tipo_entrada').value;
+
+
+    // adiciona um objeto com essas informações na lista ("assentos")
+    lista.push(
+        {
+            'nome': nome,
+            'email': email,
+            'horario': horario,
+            'numero_assento': numero_assento,
+            'tipo_entrada': tipo_entrada
+        }
+    )
+
+    // faz a chamada do método para imprimir os assentos na tela
+    imprimirAssentos();
+
+
+    // adiciona um objeto com essas informações na lista ("ingressos")
+    ingressos.push(
+        {
+            'nome': nome,
+            'email': email,
+            'horario': horario,
+            'numero_assento': numero_assento,
+            'tipo_entrada': tipo_entrada
+        }
+    )
+
+    // faz a chamada do método para imprimir os ingressos do usuário
+    imprimirIngressos();
+
+
+    // faz a chamada do método para limpar os campos de digitação
+    limpaCampos();
+
+    // imprimi no console cada objeto da lista - assentos já ocupados 
+    console.log(lista);
+}
+
+
+
+function limpaCampos() {
+    // limpa os campos do forms
+    document.getElementById('nome').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('numero_assento').value = '';
+}
+
+function imprimirAssentos() {
+    let assentos_sessao = document.getElementById('assentos-sessao'); // cria uma variavel e atribui o valor do elemento que tenha o id 'assentos-sessao'
+    assentos_sessao.innerHTML = ''; // Limpa o conteúdo existente
+
+    // contador/index do numero de cadeiras
+    let n = 1;
+    // criando fileiras de assento
+    for (let i = 0; i < 5; i++) {  // cria 5 fileiras 
+        let coluna_assentos_sessao = document.createElement('div'); // cria um elemento para representar como fileira
+        coluna_assentos_sessao.classList.add('coluna-assentos-sessao'); // adicionando class para a fileira
+
+        /** 
+         * na linha 171 é criado uma variável que tenha um elemento div
+         * porém é adicionado uma class para ele na linha 172
+         * dessa forma ele ficara como 'div.coluna-assentos-sessao' no html
+         * caso contrario o elemento div vai ser adicionado no html sem nenhum estilo css
+         */
+
+        // adicionando 10 assentos por fila
+        for (let a = 0; a < 10; a++) {
+            let assento = document.createElement('div'); // Cria um elemento para representar o assento
+            assento.classList.add('assento'); // Adiciona a classe 'assento' ao elemento
+
+            // Define o texto do assento como o número 'n'
+            assento.textContent = `${n}`;
+
+            // esse for vai percorrer toda a lista
+            for (let i = 0; i < lista.length; i++) {
+                if (lista[i].numero_assento === `${n}`) { // esse if verifica se o atributo numero assento de cada objeto da lista é igual a n
+                    console.log(`Assento ${n} está ocupado.`); // caso encontrar ele vai imprimir no console como ocupado o assento de posicao n
+                    assento.style.backgroundColor = 'red'; // ele vai trocar de verde para vermelho a div para representa-la como ocupada
+                    break; // Para de verificar assim que o assento estiver ocupado
+                }
+            }
+
+            coluna_assentos_sessao.appendChild(assento); // Adiciona o assento à fileira de assentos
+
+            n++; // Incrementa o número do assento para o próximo assento
+        }
+
+        // Adicionando a coluna de assentos à sessão
+        assentos_sessao.appendChild(coluna_assentos_sessao);
+
+        // adiciona uma quebrea de linha
+        if (i < 4) {
+            let br = document.createElement('br');
+            assentos_sessao.appendChild(br);
+        }
+    }
+}
+
+// método responsável por excluir o conteúdo da sessao-ingressos e adicionar com os novos contúedos atualizados
+function imprimirIngressos() {
+
+
+    let sessao_ingresso = document.getElementById('sessaso_ingressos');
+    sessao_ingresso.innerHTML = ''; // apaga o conteudo
+
+
+
+
+    ingressos.forEach((i, index) => { // esse foreach com callback vai ser responsavel por percorrer minha lista de ingressos e implimir cada um deles
+        let ingresso = document.createElement('div');
+        ingresso.classList.add('ingressos');
+        // cria um elemento div e adiciona uma classe ingressos
+        ingresso.innerHTML = ` 
+        <h1>Nome : ${i.nome}</h1>
+        <h1>Horário : ${i.horario}</h1>
+        <h1>Assento : ${i.numero_assento}</h1>
+        <h1>Tipo entrada : ${i.tipo_entrada}</h1>
+
+        <p id="editar" onclick="editar(${index}, '${i.numero_assento}')">Editar</p>
+        <p id="excluir" onclick="excluir(${index}, '${i.numero_assento}')">Excluir</p>
+        `
+
+        /**
+         * nas linhas 234 e 235 é criado um elemento que tem como evento ao ser clicado 
+         * de chamar uma função editar e excluir passando como valores o index da possição 
+         * do ingresso e passadno a possição do assento desse index
+         */
+        sessao_ingresso.appendChild(ingresso); // adiciona a div.ingressos na sessao_ingressos
+    })
+}
+
+
+
+function editar(index, ncadeira) {
+    // Obter os novos valores dos campos de formulário
+    let nome = document.getElementById('nome').value;
+    let email = document.getElementById('email').value;
+    let horario = document.getElementById('horario').value;
+    let numero_assento = document.getElementById('numero_assento').value;
+    let tipo_entrada = document.getElementById('tipo_entrada').value;
+
+    // Encontrar o objeto na lista com base no número do assento
+    let status = verificarStatus_Assento(numero_assento);
+
+    if (status) {
+        let obj = lista.find(i => i.numero_assento == ncadeira); // retorna um objeto com o atributo numero_assento com o mesmo valor da posicao do assento
+
+        if (obj) {
+            // Atualizar os atributos do objeto com os novos valores
+            obj.nome = nome;
+            obj.email = email;
+            obj.horario = horario;
+            obj.numero_assento = numero_assento;
+            obj.tipo_entrada = tipo_entrada;
+
+            console.log('Objeto editado:', obj);
+
+            ingressos[index] = obj;
+
+        } else {
+            console.log(`Objeto com número de assento ${ncadeira} não encontrado em 'lista'.`);
+        }
+
+        // Atualizar a exibição dos assentos e ingressos após a edição
+        imprimirAssentos();
+        imprimirIngressos();
+    } else {
+        alert('Posição de assento indisponível');
+    }
+    limpaCampos();
+}
+
+
+
+
+function excluir(index, n) {
+
+    let confirme = confirm("Reembolso realizado ? ");
+
+    if (confirme) {
+        lista = lista.filter(item => item.numero_assento !== n); // retorna uma lista de objetos onde nao os OBJs de atributo numerro_assento diferente de n
+        ingressos.splice(index, 1); // exclui com base na posicao
+        imprimirAssentos();
+        imprimirIngressos();
+    }
+
+
+}
