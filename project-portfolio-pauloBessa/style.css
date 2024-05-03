@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: Open sans;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+  background-color: rgba(37, 37, 37, 0.733);
+  color: white;
+
+  
+}
+
+/* ================ Navegação =================== */
+#Navegar {
+  display: flex;
+  width: 25vw;
+  height: 110%;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(37, 37, 37);
+  font-family: Open Sans;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+#Navegar:hover {
+  scale: 105%;
+  transition: 0.5s;
+  background-color: rgb(24, 22, 22);
+}
+
+li {
+  margin-bottom: 40px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#Foto {
+  width: 200px;
+  height: 200px;
+  background-image: url(images/imagem.jpeg);
+  background-size: cover;
+  background-position: center center;
+  border-radius: 100%;
+  border: 10px solid #6B5656;
+}
+
+.Navega {
+  color: white;
+  opacity: 0.6;
+  /* 60% de opacidade (60% de 1) */
+  transition: opacity 0.3s;
+  /* Adiciona uma transição suave de 0.3 segundos */
+  font-size: 150%;
+  transition: 0.3s;
+}
+
+.Navega:hover {
+  opacity: 1;
+  /* 100% de opacidade (1) quando o mouse passa sobre */
+  scale: 110%;
+  transition: 0.3s;
+  cursor: pointer;
+
+}
+
+/* ================ Main =================== */
+main {
+  width: 75vw;
+  height: 100vh;
+}
+
+article {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+}
+
+.Titulo {
+  margin-bottom: 40px;
+  font-size: 400%;
+  font-family: Oswald;
+}
+
+.Texto {
+  width: 90%;
+  text-align: justify;
+  text-indent: 20px;
+  /* Ajuste o valor conforme necessário */
+  font-size: 140%;
+  opacity: 0.7;
+  margin-bottom: 10px;
+
+
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  transition: 0.4s;
+}
+
+/* ================ Article : Sobre Mim =================== */
+
+#SobreMim {
+  display: block;
+  /* background-image: url(images/dr15.jpg);
+  background-size: cover;
+  background-position: center center; */
+}
+
+
+
+
+
+
+/* ================ EXPERIENCIA =================== */
+
+#Experiencia {
+  display: none;
+  /* background-image: url(images/gpt9.jpg);
+  background-size: cover;
+  background-position: center center; */
+  overflow-y: scroll;
+}
+
+/* ================ FORMAÇÃO/CURSOS =================== */
+#Formacao {
+  overflow-y: auto;
+  display: none;
+  /* background-image: url(images/gpt9.jpg);
+  background-size: cover;
+  background-position: center center; */
+}
+
+.Formacoes {
+  margin-bottom: 30px;
+  width: 90%;
+  height: auto;
+  border-bottom: 1px solid lightgray;
+  transition: .1s;
+}
+
+/* .Formacoes:hover{
+  scale: 103%;
+  box-shadow: 5px 5px 5px 5px #9e5f5f48;
+  transition: .1s;
+  padding: 10px;
+} */
+
+
+.Formacoes h1 {
+  font-size: 30px;
+}
+
+.Formacoes h4 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.Formacoes p {
+  font-size: 17px;
+  width: 80%;
+}
+
+.FotoDescricao {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+img {
+  width: 100%;
+  height: auto;
+
+}
+
+.education {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px 0;
+  transition: 0.4s;
+}
+
+.education:hover {
+  scale: 101%;
+  transition: 0.4s;
+
+  box-shadow: 5px 5px 50px 1px rgba(116, 255, 151, 0.212);
+}
+
+.education h2 {
+  font-size: 1.5em;
+  color: black;
+}
+
+.education p {
+  font-size: 1.1em;
+  color: black;
+}
+
+/* ================ CONTATO E SOCIAL =================== */
+#Contato {
+  display: none;
+
+  /* background-image: url(images/dr15.jpg);
+  background-size: cover;
+  background-position: center center; */
+
+}
+
+#Contatos-e-Redes {
+  font-size: 150%;
+  width: auto;
+  height: auto;
+
+  /* border: 1px solid black; */
+}
+
+#Contatos-e-Redes h4 {
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px 0;
+}
+
+.contact-info h2 {
+  font-size: 1.5em;
+  color: black;
+}
+
+.contact-info p {
+  font-size: 1.1em;
+  color: black;
+}
+
+/* ================ PROJETOS =================== */
+#Projetos {
+  display: none;
+
+  /* background-image: url(images/gpt9.jpg);
+  background-size: cover;
+  background-position: center center; */
+
+  overflow-y: scroll;
+}
+
+
+.project {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px 0;
+  transition: 0.4s;
+}
+
+.project:hover {
+  scale: 101%;
+  transition: 0.4s;
+  box-shadow: 5px 5px 50px 1px rgba(116, 255, 151, 0.212);
+}
+
+.project h2 {
+  font-size: 1.5em;
+  color: black;
+}
+
+.project p {
+  font-size: 1.1em;
+  text-align: justify;
+  margin-bottom: 5px;
+  color: black;
+}
+
+.project a {
+  text-decoration: none;
+  color: black;
+
+}
+
+footer {}
+
+/* Medias queries */
+#Nav-Mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+
+  /*  Article --> SobreMim */
+  #SobreMim {
+    background-image: none;
+  }
+
+  /*  Article --> Experiencia */
+  #Experiencia {
+    background-image: none;
+  }
+
+  /*  Article --> Formacao */
+  #Formacao {
+    background-image: none;
+  }
+
+  .education p {
+    color: black;
+  }
+
+  .education h2 {
+    color: black;
+  }
+
+  /*  Article --> Projetos */
+  #Projetos {
+    background-image: none;
+  }
+
+  .project p,
+  h2 {
+    color: black;
+  }
+
+  /*  Article --> Contato */
+  #Contato {
+    background-image: none;
+  }
+
+  .contact-info p,
+  h2 {
+    color: black;
+  }
+
+
+  #Navegar {
+    display: none;
+  }
+
+
+  body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+
+    background-color: rgb(37, 37, 37);
+    color: white;
+
+    padding-bottom: 20px;
+  }
+
+
+  article {
+    width: 90%;
+    height: 98%;
+    overflow-y: scroll;
+    padding: 20px;
+
+    background-image: none;
+  }
+
+  .Texto {
+    margin: 0px;
+    width: 100%;
+    text-indent: 15px;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  #Nav-Mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(24, 22, 22);
+    color: rgb(0, 255, 255);
+  }
+
+  .Navega {
+    color: rgb(0, 255, 255);
+  }
+
+  .Estreito {
+    height: 70px;
+    transition: 0.4s;
+  }
+
+  .Largo {
+    height: 200px;
+    transition: 0.4s;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .visible {
+    display: block;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
+
+}

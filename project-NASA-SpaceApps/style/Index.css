@@ -1,0 +1,400 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+img{
+  width: 120px;
+  height: 120px;
+}
+
+
+#barra-pesquisa{
+  border: none;
+  outline: none;
+  width: 300px;
+}
+
+#pesquisa{
+  padding-left: 5px;
+  width: 210px;
+  height: 20px;
+  background-color: none;
+  border: 0.1px solid black; 
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+#lupa {
+  font-size: 10px; /* Tamanho do ícone */
+  color: black; /* Cor do ícone */
+  padding: 10px; /* Espaçamento interno da div */
+  cursor: pointer;
+
+}
+
+#perfil{
+  
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  padding: 5px 5px;
+}
+#perfil:hover{
+  scale: 110%;
+  transition: 0.3s;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  padding: 5px 5px;
+}
+
+#Pesquisar{
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  
+  
+  width: auto;
+  height: auto;
+  padding: 1px;
+
+}
+
+#item-menu:hover{
+  scale: 110%;
+  border-bottom: 3px solid lightcoral;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* cabeçalho */
+#cabeçalho{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 30px;
+  background-color: rgba(211, 211, 211, 0.199);
+}
+
+/* Div da imagem do astronauta */
+#div-astronauta{
+  background-size: cover;
+  background-attachment: local;
+  background-image:url(../images/Design\ sem\ nome.png);
+  height: 85vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#imagem-astronauta{
+  width: 100vw;
+  height: 85vh;
+}
+
+/* Formulário  */
+#Form{
+  
+  margin-bottom: 50px;
+  margin-top: 50px;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#formulario{
+
+  padding: 30px;
+  
+  width: 900px;
+  height: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.24);
+  
+  border-radius: 30px;
+
+}
+
+
+/* Cards */
+
+#Cards{
+
+  width: 96vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  
+  
+
+  overflow-x: auto;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 50px 30px;
+  
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  display: inline-block;
+  
+  cursor: pointer;
+}
+
+.card:hover{
+  scale: 103%;
+  transition: 0.5s;
+}
+
+
+#Imagem-Marte{
+  background-image: url(../images/marte.jpg);
+  background-size: cover;
+  background-attachment: local;
+  width: 300px;
+  height: 50%;
+
+  border-radius: 0px 0px 10px 10px;
+}
+
+#Imagem-Jupiter{
+  background-image: url(../images/jupiter.jpg);
+  background-size: cover;
+  background-attachment: local;
+  width: 300px;
+  height: 50%;
+
+  border-radius: 0px 0px 10px 10px;
+}
+
+#Imagem-Saturno{
+  background-image: url(../images/saturno.png);
+  background-position: center ;
+  background-size: cover;
+  background-attachment: local;
+  width: 300px;
+  height: 50%;
+
+  border-radius: 0px 0px 10px 10px;
+}
+
+#Imagem-netuno{
+  background-image: url(../images/netuno.jpg);
+  background-position: center ;
+  background-size: cover;
+  background-attachment: local;
+  width: 300px;
+  height: 50%;
+
+  border-radius: 0px 0px 10px 10px;
+}
+
+#Imagem-urano{
+  background-image: url(../images/urano.jpg);
+  background-position: center ;
+  background-size: cover;
+  background-attachment: local;
+  width: 300px;
+  height: 50%;
+
+  border-radius: 0px 0px 10px 10px;
+}
+
+#Imagem-venus{
+  background-image: url(../images/venus.jpg);
+  background-position: center ;
+  background-size: cover;
+  background-attachment: local;
+  width: 300px;
+  height: 50%;
+
+  border-radius: 0px 0px 10px 10px;
+}
+
+#Imagem-mercurio{
+  background-image: url(../images/mercurio.jpg);
+  background-position: center ;
+  background-size: cover;
+  background-attachment: local;
+  width: 300px;
+  height: 50%;
+
+  border-radius: 0px 0px 10px 10px;
+}
+
+
+
+.card h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.card p {
+  font-size: 14px;
+}
+/* Estilize o conteúdo dentro dos cards */
+
+.texto-card{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  
+  height: 50%;
+  
+}
+/* =============== Link da função a  ================= */
+
+a{
+  color: black;
+  text-decoration: none;
+}
+
+/* =============== Pagina Companhias   HEADER  ================= */
+header{
+  display: flex;
+  align-items: center;
+  margin: 40px 50px 60px 50px;
+  justify-content: space-between;
+
+  /* border-bottom: 1px solid lightgray; */
+  padding-bottom: 15px;
+  
+}
+
+#Origem ,#data-chegada, #data-saida, #Destino, #Duração{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =============== Pagina Companhias   MAIN / SECTION class:COMPANHIAS  ================= */
+
+#Escolha-Companhia{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+
+.Companhia{
+  margin-bottom: 60px;
+  
+  width: 89vw;
+  height: auto;
+  
+  border-bottom: 1px solid lightgray;
+
+  /* border-radius: 9px; */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  cursor: pointer;
+
+}
+
+.Companhia:hover{
+  scale: 103%;
+  transition: .3s;
+  box-shadow: 0px 4px 10px rgba(21, 255, 0, 0.185);
+}
+
+div#Nasa{
+  background-size: cover;
+  background-attachment: local;
+  background-image:url(../images/nasa.png);
+  height: 100px;
+  width: 100px;
+  background-position: center center;
+}
+div#SpaceX {
+  background-size: 100% 100%;
+  background-attachment: local;
+  background-image: url(../images/spacex.png);
+  height: 100px;
+  width: 140px;
+  background-position: center center;
+}
+div#OrioSpan{
+  background-size: cover;
+  background-attachment: local;
+  background-image:url(../images/OrionSpan.png);
+  height: 100px;
+  width: 140px;
+  background-position: center center;
+}
+
+#Mais-Companhias{
+  margin-bottom: 60px;
+  
+  width: 20px;
+  height: 20px;
+  
+  border: 1px solid black;
+  border-radius: 100%;
+  /* border-radius: 9px; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  padding: 5px;
+}
+#Mais-Companhias:hover{
+  scale: 110%;
+  transition: 0.3s;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.479);
+}
+
+
+/* ========== Testes =========== */
+#Gif-Jupiter{
+  background-size: 100% 100%;
+  background-attachment: local;
+  background-image: url(../images/7fbB.gif);
+  height: 50px;
+  width: 50px;
+  background-position: center center;
+}
+
+/* =============== Pagina Passagens   MAIN / SECTION / HEADER class:COMPANHIAS  ===============*/
+
+#Fundo-Cidade{
+  margin: 0px;
+  padding: 0px;
+  background-size: cover;
+  background-attachment: local;
+  background-image:url(../images/Design\ sem\ nome\ \(2\).png);
+  height: 30vh;
+  width: 100vw;
+  background-position: center center;
+}
