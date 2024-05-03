@@ -1,0 +1,7 @@
+{
+    "nomes":[
+        {"id": 1,"nome": "Magal"},
+        {"id": 2,"nome": "Paulo"},
+        {"id": 3,"nome": "Robson"}
+    ]
+}
