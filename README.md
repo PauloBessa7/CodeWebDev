@@ -21,4 +21,5 @@ This repository is home to my web development projects, where I share some of my
 - **project-portfolio-pauloBessa**: My personal portfolio is located in this folder.
 
 Last updated: May 2024.
+
 ---
