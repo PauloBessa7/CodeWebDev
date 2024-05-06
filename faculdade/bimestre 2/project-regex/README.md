@@ -11,9 +11,12 @@ Este projeto tem como objetivo demonstrar o uso do método de formatação Regex
 ## Expressões regulares utilizadas
 
 - Nome: /^[A-Za-z\s]{1,100}$/;
+  
 Esta expressão garante que o campo não contenha nenhum dígito numérico ou mais que 100 caracteres;
 - Email: /^[^\s@]+@gmail\.com$/;
+  
 Esta expressão valida o formato de um email apenas com @gmail.com.
 - Telefone: /^\(?[0-9]{2}\)? ?[0-9]{4,5}-[0-9]{4}$/;
+  
 Esta expressão valida o formato do número de telefone no padrão brasileiro de DDD + número.
 
