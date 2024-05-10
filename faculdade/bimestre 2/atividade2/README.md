@@ -38,7 +38,8 @@ Esta função retorna uma string formatada representando a data e hora atual.
 
 ## Observação
 
-A entrada de dados está por meio de hardcode.
+- A entrada de dados está por meio de hardcode.
+- A apresentação do resultado das funções estão pelo console
 
 ## Exemplo de Uso:
 
