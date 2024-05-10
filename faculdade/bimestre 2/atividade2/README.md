@@ -1,5 +1,5 @@
-# [Funções de Manipulação de Datas](https://paulobessa7.github.io/CodeWebDev/faculdade/bimestre%202/atividade2/index.html)
-
+# [Funções de Manipulação de Datas](https://paulobessa7.github.io/CodeWebDev/faculdade/bimestre%202/atividade2/)
+# [Link do repositório github](https://github.com/PauloBessa7/CodeWebDev/tree/main/faculdade/bimestre%202/atividade2)
 Este projeto consiste em um conjunto de funções em JavaScript para manipulação de datas em uma página web. Abaixo, detalhamos cada uma das funções disponíveis:
 
 ## Função `dataMaior()`
