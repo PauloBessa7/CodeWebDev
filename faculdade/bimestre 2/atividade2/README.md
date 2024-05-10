@@ -1,54 +1,20 @@
 # [Funções de Manipulação de Datas](https://paulobessa7.github.io/CodeWebDev/faculdade/bimestre%202/atividade2/index.html)
 
-Este repositório contém três funções JavaScript para manipulação de datas. As funções são as seguintes:
+Este projeto consiste em um conjunto de funções em JavaScript para manipulação de datas em uma página web. Abaixo, detalhamos cada uma das funções disponíveis:
 
-## 1. `dataMaior(data1, data2)`
+## Função `dataMaior()`
 
-Esta função recebe duas datas como parâmetros e retorna a maior delas. Se as datas forem iguais, retorna `false`.
+Esta função compara duas datas inseridas pelo usuário e exibe qual delas é a maior na página. Se as datas forem iguais, uma mensagem indicando isso será exibida. Se os campos de data não estiverem preenchidos, um alerta será mostrado solicitando que ambos sejam preenchidos.
 
-### Parâmetros:
+## Função `difData()`
 
-- `data1`: Objeto Date representando a primeira data.
-- `data2`: Objeto Date representando a segunda data.
+A função `difData()` calcula a diferença em dias entre duas datas inseridas pelo usuário. Se a primeira data for menor que a segunda, a diferença em dias é calculada e exibida na página. Caso contrário, um alerta é exibido informando que a primeira data precisa ser menor que a segunda. Esta função também verifica se os campos de data estão preenchidos antes de executar o cálculo.
 
-### Retorno:
+## Função `dataAgora()`
 
-- Retorna a maior data entre `data1` e `data2`, ou `false` se as datas forem iguais.
+Esta função obtém a data e hora atuais do sistema e exibe na página no formato "hora:minuto - dia/mês/ano".
 
-## 2. `calcData(data1, data2)`
+## Função `verificaCampos()`
 
-Esta função calcula a diferença em dias entre duas datas. Se `data1` for maior que `data2`, retorna `false`.
+A função `verificaCampos()` verifica se os campos de data estão preenchidos. Se algum dos campos estiver vazio, um alerta é exibido solicitando que ambos sejam preenchidos. Essa função é utilizada pelas outras funções para garantir que as operações sejam realizadas apenas quando os campos necessários estiverem preenchidos.
 
-### Parâmetros:
-
-- `data1`: Objeto Date representando a primeira data.
-- `data2`: Objeto Date representando a segunda data.
-
-### Retorno:
-
-- Retorna a diferença em dias entre `data1` e `data2`.
-
-## 3. `dataHoje()`
-
-Esta função retorna uma string formatada representando a data e hora atual.
-
-### Retorno:
-
-- Retorna uma string no formato "hh:mm - dd/mm/aaaa" representando a data e hora atuais.
-
-## Observação
-
-- A entrada de dados está por meio de hardcode.
-- A apresentação do resultado das funções estão pelo console
-
-## Exemplo de Uso:
-
-```javascript
-let data1 = new Date("2005-02-22");
-let data2 = new Date("2005-08-22");
-
-
-
-console.log(dataMaior(data1, data2)); // Mon Aug 22 2005 00:00:00 GMT-0300 (Horário Padrão de Brasília)
-console.log(calcData(data1, data2)); // 181
-console.log(dataHoje()); // Exemplo: 10:30 - 09/05/2024
