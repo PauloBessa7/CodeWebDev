@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando Datas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <form id="myForm">
+        <label for="data1">Data 1:</label>
+        <input type="date" id="data1" name="data1" required>
+
+        <br>
+
+        <label for="data2">Data 2:</label>
+        <input type="date" id="data2" name="data2" required>
+
+        <br>
+
+        <h3 id="resultado"></h3>
+
+        <button type="button" onclick="dataMaior()">Maior</button>
+        <button type="button" onclick="difData()">Diferença</button>
+        <button type="button" onclick="dataAgora()">Data agora</button>
+
+
+    </form>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
