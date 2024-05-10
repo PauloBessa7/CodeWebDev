@@ -36,11 +36,17 @@ Esta função retorna uma string formatada representando a data e hora atual.
 
 - Retorna uma string no formato "hh:mm - dd/mm/aaaa" representando a data e hora atuais.
 
+## Observação
+
+A entrada de dados está por meio de hardcode.
+
 ## Exemplo de Uso:
 
 ```javascript
 let data1 = new Date("2005-02-22");
 let data2 = new Date("2005-08-22");
+
+
 
 console.log(dataMaior(data1, data2)); // Mon Aug 22 2005 00:00:00 GMT-0300 (Horário Padrão de Brasília)
 console.log(calcData(data1, data2)); // 181
