@@ -1,0 +1,41 @@
+{
+  "lanches": [
+    {
+      "id": "1",
+      "igredientes": [
+        "hamburger caseiro",
+        "queijo",
+        "calabresa",
+        "molho especial"
+      ],
+      "nome": "Xsalada",
+      "valor": 20,
+      "descricao": "Melhor x lanche"
+    },
+    {
+      "id": "2",
+      "igredientes": [
+        "hamburger caseiro",
+        "queijo",
+        "bacon",
+        "calabresa",
+        "molho especial"
+      ],
+      "nome": "Xsalada",
+      "valor": 22,
+      "descricao": "Melhor x lanche"
+    },
+    {
+      "id": "3",
+      "igredientes": [
+        "hamburger de milho",
+        "Carne de galo",
+        "calabresa",
+        "molho crocante"
+      ],
+      "nome": "Pao",
+      "valor": 20,
+      "descricao": "Pão e agua"
+    }
+  ]
+}
