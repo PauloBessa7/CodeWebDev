@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Gerenciamento de pessoas</h1>
+    <div>
+        <button type="button" onclick="listarPessoas()">Listar todas as pessoas</button>
+        <div id="div-pessoas"></div>
+    </div>
+    <h2>Procurar por id</h2>
+    <div>
+        <input type="text" id="id-pessoa">
+        <button type="button" onclick="idPessoa()">Procurar</button>
+        <div id="div-id-pessoa"></div>
+    </div>
+    <h2>Adicionar Pessoa</h2>
+    <div>
+        <input type="text" id="nome-pessoa">
+        <button type="button" onclick="adicionarPessoa()">Adicionar</button>
+    </div>
+    <h2>Editar Pessoa</h2>
+    <div>
+        <input type="text" id="id-pessoa-troca">
+        <input type="text" id="nome-novo-pessoa">
+        <button type="button" onclick="editarPessoa()">Editar</button>
+    </div>
+    <h2>Deletar Pessoa</h2>
+    <div>
+        <input type="text" id="id-pessoa-delete">
+        <button type="button" onclick="deletarPessoa()">Deletar</button>
+    </div>
+    
+    
+
+    <script src="index.js"></script>
+</body>
+</html>
